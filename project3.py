@@ -34,7 +34,7 @@ def exponential_weight_full_info(payoffs, epsilon, h):
             cdf = cdf + exp_prob[select_action]
         action.append(select_action)
         sum += payoffs[select_action][j]
-    return select_action, action, sum
+    return action, sum
 
 
 def follow_the_perturbed_leader_full_info(payoffs, epsilon, h):
@@ -53,7 +53,7 @@ def follow_the_perturbed_leader_full_info(payoffs, epsilon, h):
         selected_action = np.argmax(action_hist_payoff)
         action.append(selected_action)
         sum += payoffs[selected_action][j]
-    return selected_action, action, sum
+    return action, sum
 
 
 
